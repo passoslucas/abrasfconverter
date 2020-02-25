@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<ConsultarNfseResposta xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse>
+                <InfNfse>
+                    <Numero>57</Numero>
+                    <CodigoVerificacao>7VWZM7K2H</CodigoVerificacao>
+                    <DataEmissao>2019-12-18T13:38:12.700-03:00</DataEmissao>
+                    <IdentificacaoRps/>
+                    <NaturezaOperacao>2</NaturezaOperacao>
+                    <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                    <Competencia>2019-12-01T00:00:00-03:00</Competencia>
+                    <OutrasInformacoes>BANCO CAIXA ECONÔMICA FEDERAL AG: 1769 OP: 003 C/C: 00001355-1</OutrasInformacoes>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>59124.06</ValorServicos>
+                            <ValorDeducoes>0.00</ValorDeducoes>
+                            <ValorInss>6503.65</ValorInss>
+                            <ValorIr>886.86</ValorIr>
+                            <IssRetido>1</IssRetido>
+                            <BaseCalculo>59124.06</BaseCalculo>
+                            <Aliquota>3</Aliquota>
+                            <ValorLiquidoNfse>49959.83</ValorLiquidoNfse>
+                            <ValorIssRetido>1773.72</ValorIssRetido>
+                            <DescontoCondicionado>0.00</DescontoCondicionado>
+                            <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                        </Valores>
+                        <ItemListaServico>0702</ItemListaServico>
+                        <Discriminacao>{[[Descricao=EXECUÇÃO DE OBRA DE REFORMA E MANUTENÇÃO DOS BANHEIROS PÚBLICOS DO CENTRO DE INFORMAÇÕES TURÍSTICAS, LOCALIZADOS NA PRAÇA MAJOR NICOLLETTI PARA MUNICIPIO DE GRAMADO.][ItemServico=0702][Quantidade=1][ValorUnitario=59124.06][ValorServico=59124.06][ValorBaseCalculo=59124.06][Aliquota=3][Deducoes=0][DescontoCondicionado=0][DescontoIncondicionado=0]]}</Discriminacao>
+                        <CodigoMunicipio>4309100</CodigoMunicipio>
+                    </Servico>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <Cnpj>18885555000123</Cnpj>
+                            <InscricaoMunicipal>430-0384/2762</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>VALMIR STEFINI DA SILVA</RazaoSocial>
+                        <NomeFantasia>EMPREITEIRA E PRESTADOR DE SERVICOS STEFINI</NomeFantasia>
+                        <Endereco>
+                            <Endereco>R Tancredo Neves</Endereco>
+                            <Numero>1092</Numero>
+                            <Bairro>RIO BRANCO</Bairro>
+                            <CodigoMunicipio>4316006</CodigoMunicipio>
+                            <Cep>95690000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>5135471594</Telefone>
+                            <Email>teresasilva@tca.com.br</Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <TomadorServico>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cnpj>88847082000155</Cnpj>
+                            </CpfCnpj>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>MUNICIPIO DE GRAMADO</RazaoSocial>
+                        <Endereco>
+                            <Endereco>AV DAS HORTENSIAS</Endereco>
+                            <Numero>2029</Numero>
+                            <Complemento>TERREO</Complemento>
+                            <Bairro>CENTRO</Bairro>
+                            <CodigoMunicipio>4309100</CodigoMunicipio>
+                            <Uf>RS</Uf>
+                        </Endereco>
+                        <Contato/>
+                    </TomadorServico>
+                    <IntermediarioServico/>
+                    <ConstrucaoCivil/>
+                    <CondicaoPagamento>
+                        <Condicao>1</Condicao>
+                        <QtdParcela>1</QtdParcela>
+                        <Parcelas>
+                            <Parcela>1</Parcela>
+                            <Valor>49959.83</Valor>
+                        </Parcelas>
+                    </CondicaoPagamento>
+                </InfNfse>
+            </Nfse>
+            <NfseCancelamento>
+                <Confirmacao>
+                    <Pedido>
+                        <InfPedidoCancelamento/>
+                        <ns2:Signature/>
+                    </Pedido>
+                    <InfConfirmacaoCancelamento>
+                        <Sucesso>false</Sucesso>
+                    </InfConfirmacaoCancelamento>
+                </Confirmacao>
+            </NfseCancelamento>
+            <NfseSubstituicao>
+                <SubstituicaoNfse/>
+            </NfseSubstituicao>
+        </CompNfse>
+    </ListaNfse>
+    <ListaMensagemRetorno/>
+</ConsultarNfseResposta>
