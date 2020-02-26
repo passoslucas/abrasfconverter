@@ -1,0 +1,99 @@
+<Notas>
+  <camposModificados />
+  <contemChaveEquals>false</contemChaveEquals>
+  <chaveEquals />
+  <Nota>
+    <cpfCnpjTomador>87115838001857</cpfCnpjTomador>
+    <numeroNota>20207</numeroNota>
+    <dataEmissao>2020-02-17 09:34:14.0 BRT</dataEmissao>
+    <situacaoNota>A</situacaoNota>
+    <valorBruto>12119.9</valorBruto>
+    <codigoVerificacao>58416681</codigoVerificacao>
+    <competencia>202002</competencia>
+    <inscricaoAtividade>148560</inscricaoAtividade>
+    <naturezaOperacao>[6.3] Imposto devido fora de Cachoeirinha, com obriga&#231;&#227;o de reten&#231;&#227;o na fonte</naturezaOperacao>
+    <cpfCnpjPrestador>23449000000179</cpfCnpjPrestador>
+    <guia>N&#195;O</guia>
+    <nome>EDER AMADOR FERREIRA -ME</nome>
+    <serieNota>NF</serieNota>
+    <aliquotaServicos>0.03</aliquotaServicos>
+    <valorDeducao>0</valorDeducao>
+    <valorIss>363.6</valorIss>
+    <valorLiquidoNfse>10423.11</valorLiquidoNfse>
+    <valorCofins>0.0</valorCofins>
+    <valorInss>1333.19</valorInss>
+    <valorIr>0.0</valorIr>
+    <valorCsll>0.0</valorCsll>
+    <valorPis>0.0</valorPis>
+    <outrasRetencoes>0</outrasRetencoes>
+    <valorDescontoCondicionado>0.0</valorDescontoCondicionado>
+    <valorDescontoIncondicionado>0</valorDescontoIncondicionado>
+    <discriminacao updated="yes">Aditivo Salas Sarandi
+
+DADOS BANC&#193;RIOS: Banco Ita&#250; - AG 0602 CC 20.227-7discriminacao has been added</discriminacao>
+    <municipioPrestacaoServico>4314902</municipioPrestacaoServico>
+    <numeroProtocolo>2865196</numeroProtocolo>
+    <numeroServico>63</numeroServico>
+    <itemListaServico>702</itemListaServico>
+    <codigoCnae>4120400</codigoCnae>
+    <razaoSocialTomador>INSTITUICAO ADVENTISTA SUL-RIO-GRANDENSE DE EDUCACAO</razaoSocialTomador>
+    <baseDeCalculo>12119.9</baseDeCalculo>
+    <valorIssRetido>363.6</valorIssRetido>
+    <descricaoEndereco>RUA PAPA JO&#195;O XXIII, 1100, APTO 202 BL 17, SAO VICENTE DE PAULO</descricaoEndereco>
+    <inscricaoCadastroGeral>0</inscricaoCadastroGeral>
+    <cnpjPrestador>23449000000179</cnpjPrestador>
+    <inscricao>0</inscricao>
+    <razaoSocialPrestador>EDER AMADOR FERREIRA -ME</razaoSocialPrestador>
+    <cepPrestador>94910170</cepPrestador>
+    <enderecoPrestador>RUA PAPA JO&#195;O XXIII</enderecoPrestador>
+    <numeroEnderecoPrestador>1100</numeroEnderecoPrestador>
+    <complementoEnderecoPrestador>APTO 202 BL 17</complementoEnderecoPrestador>
+    <bairroPrestador>SAO VICENTE DE PAULO</bairroPrestador>
+    <descricaoCidadePrestador>CACHOEIRINHA</descricaoCidadePrestador>
+    <cidadePrestador>4303103</cidadePrestador>
+    <descricaoCidadeTomador>PORTO ALEGRE</descricaoCidadeTomador>
+    <ufPrestador>RS</ufPrestador>
+    <telefonePrestador>5135472003</telefonePrestador>
+    <cnpj>23449000000179</cnpj>
+    <serie>NF</serie>
+    <descricaoListaServico>Execu&#231;&#227;o  por administra&#231;&#227;o  empreitada ou subempreitada  de obras de constru&#231;&#227;o civil  hidr&#225;ulica ou el&#233;trica e de outras obras semelhantes  inclusive sondagem  perfura&#231;&#227;o de</descricaoListaServico>
+    <codigoImagemPrestador>0</codigoImagemPrestador>
+    <numeroAlvaraInfoAdicional>148560</numeroAlvaraInfoAdicional>
+    <codigoDoMunicipioGerador>0</codigoDoMunicipioGerador>
+    <sequenciaAidof>0</sequenciaAidof>
+    <controle>4</controle>
+    <sequenciaLote>2865196</sequenciaLote>
+    <valorCredito>0.0</valorCredito>
+    <issRetido>1</issRetido>
+    <statusRps>1</statusRps>
+    <numeroRpsSubstituido>0</numeroRpsSubstituido>
+    <indicacaoCpfCnpj>2</indicacaoCpfCnpj>
+    <enderecoTomador>RUA PASSOS FIGUEROA</enderecoTomador>
+    <numeroEnderecoTomador>841</numeroEnderecoTomador>
+    <bairroTomador>SARANDI</bairroTomador>
+    <cidadeTomador>4314902</cidadeTomador>
+    <ufTomador>RS</ufTomador>
+    <cepTomador>91110500</cepTomador>
+    <sequenciaChave>0</sequenciaChave>
+    <valorNota>10423.11</valorNota>
+    <sequenciaPlanoConta>0</sequenciaPlanoConta>
+    <cpfCgcRetencao>87115838001857</cpfCgcRetencao>
+    <numeroFolha>0</numeroFolha>
+    <numeroRegistro>0</numeroRegistro>
+    <sequenciaNotaFiscal>6419597</sequenciaNotaFiscal>
+    <codigoTipoNota>0</codigoTipoNota>
+    <numeroNfSeSubstituida>0</numeroNfSeSubstituida>
+    <regimeEspecialTributacao>0</regimeEspecialTributacao>
+    <optanteSimplesNacional>1</optanteSimplesNacional>
+    <incentivadorCultural>2</incentivadorCultural>
+    <numeroRps>20200217093414</numeroRps>
+    <serieRps>NF</serieRps>
+    <tipoRps>0</tipoRps>
+    <dataEmissaoRps>2020-02-17 09:34:14.0 BRT</dataEmissaoRps>
+    <descricaoCnae>Constru&#231;&#227;o de edif&#237;cios</descricaoCnae>
+    <dataGeracao>2020-02-17 09:34:14.0 BRT</dataGeracao>
+    <chaveRetencaoIssAtividade>0</chaveRetencaoIssAtividade>
+    <numeroNfseSubstituta>0</numeroNfseSubstituta>
+    <numeroNfseSubstituida>0</numeroNfseSubstituida>
+  </Nota>
+</Notas>
