@@ -19,7 +19,8 @@ valor_inss = float((myroot[3][18].text))
 valor_ir = float((myroot[3][19].text))
 iss_retido = int((myroot[3][59].text))
 base_calc = float((myroot[3][32].text))
-aliquota = float((myroot[3][13].text))
+aliquota_bruta = float((myroot[3][13].text))
+aliquota = aliquota_bruta * 100
 valor_liq = float((myroot[3][16].text))
 valor_iss_ret = float((myroot[3][33].text))
 desc_cond = float((myroot[3][23].text))
@@ -27,7 +28,7 @@ desc_incond = float((myroot[3][24].text))
 
 #dados servico
 cod_serv = int((myroot[3][29].text))
-discrim_serv = (myroot[3][51].text)
+discrim_serv = str((myroot[3][51].text))
 cod_mun_serv = int((myroot[3][26].text))
 
 #dados prestador
@@ -65,8 +66,16 @@ if sit_nota == 'A':
 else:
     cancelamento = "true"
 
+descricao = []
 
-print(valor_nota)
+descricao.append(discrim_serv)
+descricao.append(cod_serv)
+descricao.append(valor_bruto)
+descricao.append(base_calc)
+descricao.append(aliquota)
+descricao.append(deducoes)
+descricao.append(desc_cond)
+descricao.append(desc_incond)
 
 print('<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>')
 print('<ConsultarNfseResposta xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">')
@@ -97,7 +106,7 @@ print("                            <DescontoCondicionado>{}</DescontoCondicionad
 print("                            <DescontoIncondicionado>{}</DescontoIncondicionado>".format(desc_incond))
 print("                        </Valores>")
 print("                        <ItemListaServico>{}</ItemListaServico>".format(cod_serv))
-print("                        <Discriminacao>{[[{}][ItemServico={}][Quantidade=1][ValorUnitario={}][ValorServico={}][ValorBaseCalculo={}][Aliquota={}][Deducoes={}][DescontoCondicionado={}][DescontoIncondicionado={}]]}</Discriminacao>".format(discrim_serv, cod_serv, valor_bruto, base_calc, aliquota, deducoes, desc_cond, desc_incond))
+print("                        <Discriminacao>{[[{}][ItemServico={}][Quantidade=1][ValorUnitario={}][ValorServico={}][ValorBaseCalculo={}][Aliquota={}][Deducoes={}][DescontoCondicionado={}][DescontoIncondicionado={}]]}</Discriminacao>".format(discrim_serv, cod_serv, valor_bruto, valor_bruto, base_calc, aliquota, deducoes, desc_cond, desc_incond))
 print("                        <CodigoMunicipio>{}</CodigoMunicipio>".format(cod_mun_serv))
 print("                    </Servico>")
 print("                    <PrestadorServico>")
@@ -166,4 +175,5 @@ print("        </CompNfse>")
 print("    </ListaNfse>")
 print("    <ListaMensagemRetorno/>")
 print("</ConsultarNfseResposta>")
+
 
