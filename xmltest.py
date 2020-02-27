@@ -3,6 +3,10 @@ import xml.etree.ElementTree as ET
 mytree = ET.parse('abrasf.xml')
 myroot = mytree.getroot()
 
+
+for child in myroot[0][0][0][0]:
+    print(child.text)
+
 #cabecalho nota
 num_nota = (myroot[0][0][0][0][0].text)
 ver_code = (myroot[0][0][0][0][1].text)
@@ -56,14 +60,13 @@ valor_parcela = (myroot[0][0][0][0][13][2][1].text)
 cancelada = (myroot[0][0][1][0][1][0].text)
 
 
-print(num_nota, ver_code, optante, outras_info, valor_servico, valor_inss, valor_ir, iss_retido, base_calculo, aliquota, valor_liq, valor_iss_ret, desc_cond, desc_incond)
-print(cod_serv, discrim_serv, cod_mun_serv)
-print(prestador_cnpj, prestador_im, prestador_nome)
-print(prestador_end_rua, prestador_end_num, prestador_end_bairro, prestador_cod_mun, prestador_end_cep, prestador_contato, prestador_email)
-print(tomador_cnpj, tomador_nome, tomador_end_rua, tomador_end_num, tomador_end_comp, tomador_end_bairro, tomador_cod_mun, tomador_uf)
-print(valor_parcela)
-print(cancelada)
-
+# print(num_nota, ver_code, optante, outras_info, valor_servico, valor_inss, valor_ir, iss_retido, base_calculo, aliquota, valor_liq, valor_iss_ret, desc_cond, desc_incond)
+# print(cod_serv, discrim_serv, cod_mun_serv)
+# print(prestador_cnpj, prestador_im, prestador_nome)
+# print(prestador_end_rua, prestador_end_num, prestador_end_bairro, prestador_cod_mun, prestador_end_cep, prestador_contato, prestador_email)
+# print(tomador_cnpj, tomador_nome, tomador_end_rua, tomador_end_num, tomador_end_comp, tomador_end_bairro, tomador_cod_mun, tomador_uf)
+# print(valor_parcela)
+# print(cancelada)
 
 
 
