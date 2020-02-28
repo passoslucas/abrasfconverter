@@ -1,13 +1,37 @@
-import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
-mytree = ET.parse('nfs.xml')
-myroot = mytree.getroot()
+mytree = minidom.parse('nfs.xml')
+tagname = mytree.getElementsByTagName('camposModificados')
+print(tagname)
+#print(tagname.attributes['camposModficados'].value)
+print(tagname.firstChild.data)
 
-for line in myroot.iter('cpfCnpjTomador'):
-    newcnpj = int(x.text) + 1
-    x.text = str(newcnpj)
 
-mytree.write('nfs60.xml')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #cabecalho nota
 # num_nota = int((myroot[3][1].text))
