@@ -1,74 +1,78 @@
+import os
+from xml.etree import ElementTree
 import xml.etree.ElementTree as ET
 
-mytree = ET.parse('nfs.xml')
-myroot = mytree.getroot()
+file_name = 'nfs.xml'
+full_file = os.path.abspath(os.path.join(file_name))
 
-for line in myroot.iter('cpfCnpjTomador'):
-    newcnpj = int(x.text) + 1
-    x.text = str(newcnpj)
+dom = ElementTree.parse(full_file)
 
-mytree.write('nfs60.xml')
+nota = dom.findall('Nota')
 
-#cabecalho nota
-# num_nota = int((myroot[3][1].text))
-# cod_ver = (myroot[3][5].text)
-# x = (myroot[3][2].text)
-# data_emissao, hora_emissao , y = (x.split(' '))
-# optante = int((myroot[3][79].text))
-# competencia = (myroot[3][6].text)
-# obs_nota = (myroot[3][25].text)
+for x in nota:
+    cnpj_tom = x.find('cpfCnpjTomador').text
+    num_nota = x.find('numeroNota').text
+    emissao = x.find('dataEmissao').text
+    situacao_nota = x.find('situacaoNota').text
+    valor_Bruto = x.find('valorBruto').text
+    codigo_ver = x.find('codigoVerificacao').text
+    competencia = x.find('competencia').text
+    cnpj_pres = x.find('cpfCnpjPrestador').text
+    aliquota = x.find('aliquotaServicos').text
+    valor_deducao = x.find('valorDeducao').text
+    valor_iss = x.find('valorIss').text
+    valor_liq = x.find('valorLiquidoNfse').text
+    valor_inss = x.find('valorInss').text
+    desc_cond = x.find('valorDescontoCondicionado').text
+    desc_incond = x.find('valorDescontoIncondicionado').text
+    discriminacao = x.find('discriminacao').text
+    mun_serv = x.find('municipioPrestacaoServico').text
+    cod_serv = x.find('itemListaServico').text
+    nome_tom = x.find('razaoSocialTomador').text
+    base_calc = x.find('baseDeCalculo').text
+    valor_iss = x.find('valorIssRetido').text
+    nome_prest = x.find('razaoSocialPrestador').text
+    cep_prest = x.find('cepPrestador').text
+    prest_end_rua = x.find('enderecoPrestador').text
+    prest_end_num = x.find('numeroEnderecoPrestador').text
+    prest_end_compl = x.find('complementoEnderecoPrestador').text
+    prest_end_bairro = x.find('bairroPrestador').text
+    prest_end_cidade = x.find('descricaoCidadePrestador').text
+    prest_cod_cidade = x.find('cidadePrestador').text
+    tom_end_cidade = x.find('descricaoCidadeTomador').text
+    prest_uf = x.find('ufPrestador').text
+    prest_fone = x.find('telefonePrestador').text
+    iss_retido = x.find('issRetido').text
+    tom_end_rua = x.find('enderecoTomador').text
+    tom_end_num = x.find('numeroEnderecoTomador').text
+    tom_end_bairro = x.find('bairroTomador').text
+    tom_cod_cidade = x.find('cidadeTomador').text
+    tom_uf = x.find('ufTomador').text
+    cep_tom = x.find('cepTomador').text
+    valor_nota = x.find('valorNota').text
+    optante = x.find('optanteSimplesNacional').text
 
-# #dados nota
-# valor_bruto = float((myroot[3][4].text))
-# deducoes = float((myroot[3][14].text))
-# valor_inss = float((myroot[3][18].text))
-# valor_ir = float((myroot[3][19].text))
-# iss_retido = int((myroot[3][59].text))
-# base_calc = float((myroot[3][32].text))
-# aliquota_bruta = float((myroot[3][13].text))
-# aliquota = aliquota_bruta * 100
-# valor_liq = float((myroot[3][16].text))
-# valor_iss_ret = float((myroot[3][33].text))
-# desc_cond = float((myroot[3][23].text))
-# desc_incond = float((myroot[3][24].text))
+xml_doc = ET.Element('ConsultarNfseResposta')
 
-# #dados servico
-# cod_serv = int((myroot[3][29].text))
-# discrim_serv = str((myroot[3][51].text))
-# cod_mun_serv = int((myroot[3][26].text))
+listaNfse = ET.SubElement(xml_doc, 'ListaNfse')
+compNfse = ET.SubElement(listaNfse, 'CompNfse')
+nfse = ET.SubElement(compNfse, 'Nfse')
+infNfse = ET.SubElement(nfse, 'InfNfse')
+ET.SubElement(infNfse, 'Numero').text = num_nota
 
-# #dados prestador
-# prestador_cnpj = (myroot[3][36].text)
-# prestador_nome = (myroot[3][11].text)
-# prestador_end_rua = (myroot[3][40].text)
-# prestador_end_num = (myroot[3][41].text)
-# prestador_end_comp = (myroot[3][42].text)
-# prestador_end_bairro = (myroot[3][43].text)
-# prestador_cod_mun = (myroot[3][45].text)
-# prestador_end_cep = (myroot[3][39].text)
-# prestador_contato = (myroot[3][48].text)
-# prestador_uf = (myroot[3][47].text)
-# prestador_end_mun = (myroot[3][44].text)
+tree = ET.ElementTree(xml_doc)
+tree.write('sample.xml', encoding="ISO-8859-1")
 
-# #dados tomador
-# tomador_cnpj = (myroot[3][0].text)
-# tomador_nome = (myroot[3][31].text)
-# tomador_end_rua = (myroot[3][63].text)
-# tomador_end_num = (myroot[3][64].text)
-# tomador_end_bairro = (myroot[3][65].text)
-# tomador_cod_mun = (myroot[3][66].text)
-# tomador_end_cep = (myroot[3][68].text)
-# tomador_uf = (myroot[3][67].text)
-# tomador_end_mun = (myroot[3][46].text)
 
-# #dados pagamento
-# valor_nota = float((myroot[3][70].text))
-
-# #cancelamento
-# cancelamento = 'false'
-# sit_nota = (myroot[3][3].text)
-# if sit_nota == 'A':
-#     cancelamento = "false"
-# else:
-#     cancelamento = "true"
-
+# def prettify(element, indent='  '):
+#     queue = [(0, element)]  # (level, element)
+#     while queue:
+#         level, element = queue.pop(0)
+#         children = [(level + 1, child) for child in list(element)]
+#         if children:
+#             element.text = '\n' + indent * (level+1)  # for child open
+#         if queue:
+#             element.tail = '\n' + indent * queue[0][0]  # for sibling open
+#         else:
+#             element.tail = '\n' + indent * (level-1)  # for parent close
+#         queue[0:0] = children  # prepend so children come before siblings
