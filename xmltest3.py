@@ -1,11 +1,10 @@
 import os
 import xml.etree.ElementTree as ET
+# import xml.dom.minidom
 
 file_name = 'nfs.xml'
 full_file = os.path.abspath(os.path.join(file_name))
-
 dom = ET.parse(full_file)
-
 nota = dom.findall('Nota')
 
 for x in nota:
@@ -52,11 +51,12 @@ for x in nota:
     optante = x.find('optanteSimplesNacional').text
 
 
+#estrutura inicial
 xml_doc = ET.Element('ConsultarNfseResposta')
-
 listaNfse = ET.SubElement(xml_doc, 'ListaNfse')
 compNfse = ET.SubElement(listaNfse, 'CompNfse')
 nfse = ET.SubElement(compNfse, 'Nfse')
+
 #cabecalho
 infNfse = ET.SubElement(nfse, 'InfNfse')
 ET.SubElement(infNfse, 'Numero').text = num_nota
@@ -64,6 +64,7 @@ ET.SubElement(infNfse, 'CodigoVerificacao').text = codigo_ver
 ET.SubElement(infNfse, 'DataEmissao').text = emissao
 ET.SubElement(infNfse, 'IdentificacaoRps')
 ET.SubElement(infNfse, 'NaturezaOperacao').text = '2'
+
 #geral / simples
 geral = '1'
 simples = '2'
@@ -76,9 +77,9 @@ ET.SubElement(infNfse, 'OptanteSimplesNacional').text = optante
 #descricao do servico
 ET.SubElement(infNfse, 'Competencia').text = competencia
 ET.SubElement(infNfse, 'OutrasInformacoes').text = discriminacao
-servico = ET.SubElement(infNfse, 'Servico')
 
-#valores
+#valores servico
+servico = ET.SubElement(infNfse, 'Servico')
 valores = ET.SubElement(servico, 'Valores')
 ET.SubElement(valores, 'ValorServicos').text = valor_Bruto
 ET.SubElement(valores, 'ValorDeducoes').text = valor_deducao
@@ -173,40 +174,25 @@ ET.SubElement(nfse_subs, 'SubstituicaoNfse')
 ET.SubElement(xml_doc, 'ListaMensagemRetorno')
 
 
-#create new file
 tree = ET.ElementTree(xml_doc)
 tree.write('sample.xml', encoding="ISO-8859-1")
 
 def indent(elem, level=0):
     i = "\n" + level*"    "
     j = "\n" + (level-1)*"    "
-    g = '\n'
     if len(elem):
         if not elem.text or not elem.text.strip():
             elem.text = i
         if not elem.tail or not elem.tail.strip():
-            elem.tail = i
+            elem.tail = j
         for SubElement in elem:
             indent(SubElement, level+1)
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = j
     else:
         if level and(not elem.tail or not elem.tail.strip()):
             elem.tail = j
-    return elem
 
 
-def parse(source, parser=None):
-    tree = ET
-    tree.parse('sample.xml')
-    return tree
-    
-root = tree.getroot()
-indent(root)
-tree.write('Out.xml', encoding="ISO-8859-1")
-
-
-# def prettify(element, indent='  '):
+# def prettify(element, indent='    '):
 #     queue = [(0, element)]  # (level, element)
 #     while queue:
 #         level, element = queue.pop(0)
@@ -218,3 +204,18 @@ tree.write('Out.xml', encoding="ISO-8859-1")
 #         else:
 #             element.tail = '\n' + indent * (level-1)  # for parent close
 #         queue[0:0] = children  # prepend so children come before siblings
+
+
+def parse(source, parser=None):
+    tree = ET
+    tree.parse('sample.xml')
+    return tree
+    
+
+root = tree.getroot()
+indent(root)
+tree.write('Out.xml', encoding="ISO-8859-1")
+
+
+
+
