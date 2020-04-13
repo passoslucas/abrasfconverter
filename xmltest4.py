@@ -5,8 +5,8 @@ from varname import varname
 
 file_name = 'nfs.xml'
 full_file = os.path.abspath(os.path.join(file_name))
-dom = ET.parse(full_file)
-nota = dom.findall('Nota')
+tree = ET.parse(full_file)
+nota = tree.findall('Nota')
 
 for x in nota:
     cnpj_tom = x.find('cpfCnpjTomador').text
@@ -54,19 +54,23 @@ for x in nota:
 
 final_file_name = 'abrasf_test.xml'
 final_full_file = os.path.abspath(os.path.join(final_file_name))
-tree = ET.parse(final_full_file)
-notaTest = tree.findall('InfNfse')
-root = tree.getroot()
+dom = ET.parse(final_full_file)
+nota_lst = dom.findall('InfNfse')
 
-for elem in root.iter():
-    tag_name = elem.tag
-    tag_text = elem.text
-    #print(tag_name, tag_text)
+for item in nota_lst:
+    print ('Numero: ', item.find('Numero').text)
+
+# root = dom.getroot()
+
+# for elem in root.iter():
+#     tag_name = elem.tag
+#     tag_text = elem.text
+#     #print(tag_name, tag_text)
 
 
-for y in notaTest:
-    numeroNota = y.find('Numero')
-    print(numeroNota)
+# for y in notaTest:
+#     numeroNota = y.find('Numero')
+#     print(numeroNota)
     
     
 

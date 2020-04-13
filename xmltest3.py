@@ -1,9 +1,14 @@
+import tkinter as tk
+from tkinter import filedialog
 import os
 import xml.etree.ElementTree as ET
 # import xml.dom.minidom
 
-file_name = 'nfs.xml'
-full_file = os.path.abspath(os.path.join(file_name))
+# path = tk.Tk()
+# path.withdraw()
+
+full_file = filedialog.askopenfile()
+print (full_file)
 dom = ET.parse(full_file)
 nota = dom.findall('Nota')
 
