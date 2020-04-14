@@ -4,12 +4,13 @@ import os
 import xml.etree.ElementTree as ET
 # import xml.dom.minidom
 
-# path = tk.Tk()
-# path.withdraw()
+path = tk.Tk()
+path.withdraw()
 
 full_file = filedialog.askopenfile()
 print (full_file)
 dom = ET.parse(full_file)
+notas = dom.findall('Notas')
 nota = dom.findall('Nota')
 
 for x in nota:
@@ -178,6 +179,7 @@ ET.SubElement(nfse_subs, 'SubstituicaoNfse')
 
 ET.SubElement(xml_doc, 'ListaMensagemRetorno')
 
+formato_arquivo = '.xml'
 
 tree = ET.ElementTree(xml_doc)
 tree.write('sample.xml', encoding="ISO-8859-1")
@@ -196,31 +198,11 @@ def indent(elem, level=0):
         if level and(not elem.tail or not elem.tail.strip()):
             elem.tail = j
 
-
-# def prettify(element, indent='    '):
-#     queue = [(0, element)]  # (level, element)
-#     while queue:
-#         level, element = queue.pop(0)
-#         children = [(level + 1, child) for child in list(element)]
-#         if children:
-#             element.text = '\n' + indent * (level+1)  # for child open
-#         if queue:
-#             element.tail = '\n' + indent * queue[0][0]  # for sibling open
-#         else:
-#             element.tail = '\n' + indent * (level-1)  # for parent close
-#         queue[0:0] = children  # prepend so children come before siblings
-
-
 def parse(source, parser=None):
     tree = ET
     tree.parse('sample.xml')
     return tree
-    
 
 root = tree.getroot()
 indent(root)
 tree.write('Out.xml', encoding="ISO-8859-1")
-
-
-
-
