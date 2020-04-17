@@ -4,66 +4,70 @@
     <CompNfse>
         <Nfse>
             <InfNfse>
-                <Numero>20209</Numero>
-                <CodigoVerificacao>58416681</CodigoVerificacao>
-                <DataEmissao>2020-02-17 09:34:14.0 BRT</DataEmissao>
+                <Numero>202016</Numero>
+                <CodigoVerificacao>29659249</CodigoVerificacao>
+                <DataEmissao>2020-03-05 09:54:48.0 BRT</DataEmissao>
                 <IdentificacaoRps />
-                <NaturezaOperacao>2</NaturezaOperacao>
-                <OptanteSimplesNacional>2</OptanteSimplesNacional>
-                <Competencia>202002</Competencia>
-                <OutrasInformacoes>Aditivo Salas Sarandi
+                <NaturezaOperacao>1</NaturezaOperacao>
+                <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                <Competencia>202003</Competencia>
+                <OutrasInformacoes>SERVIÇO DE ILUMINAÇÃO E PALCO
 
-DADOS BANCï¿½RIOS: Banco Itaï¿½ - AG 0602 CC 20.227-7</OutrasInformacoes>
+Conta PJ: 3351-0
+Agência: 1615 -2
+Bradesco
+Carlos Alberto Rodrigues Lara
+CNPJ: 29.132.850/0001-25</OutrasInformacoes>
                 <Servico>
                     <Valores>
-                        <ValorServicos>12119.9</ValorServicos>
+                        <ValorServicos>700</ValorServicos>
                         <ValorDeducoes>0</ValorDeducoes>
-                        <ValorInss>1333.19</ValorInss>
+                        <ValorInss>0.0</ValorInss>
                         <ValorIr />
-                        <IssRetido>1</IssRetido>
-                        <BaseCalculo>12119.9</BaseCalculo>
-                        <Aliquota>0.03</Aliquota>
-                        <ValorLiquidoNfse>10423.11</ValorLiquidoNfse>
-                        <ValorIssRetido>363.6</ValorIssRetido>
+                        <IssRetido>2</IssRetido>
+                        <BaseCalculo>700.0</BaseCalculo>
+                        <Aliquota>0.02</Aliquota>
+                        <ValorLiquidoNfse>700</ValorLiquidoNfse>
+                        <ValorIssRetido>0.0</ValorIssRetido>
                         <DescontoCondicionado>0.0</DescontoCondicionado>
                         <DescontoIncondicionado>0</DescontoIncondicionado>
                         </Valores>
-                    <ItemListaServico>702</ItemListaServico>
+                    <ItemListaServico>1208</ItemListaServico>
                     <Discriminacao />
-                    <CodigoMunicipio>4314902</CodigoMunicipio>
+                    <CodigoMunicipio>4321204</CodigoMunicipio>
                     </Servico>
                 <PrestadorServico>
                     <IdentificacaoPrestador>
-                        <Cnpj>23449000000179</Cnpj>
+                        <Cnpj>29132850000125</Cnpj>
                         <InscricaoMunicipal />
                         </IdentificacaoPrestador>
-                    <RazaoSocial>EDER AMADOR FERREIRA -ME</RazaoSocial>
-                    <NomeFantasia>EDER AMADOR FERREIRA -ME</NomeFantasia>
+                    <RazaoSocial>CARLOS ALBERTO RODRIGUES LARA</RazaoSocial>
+                    <NomeFantasia>CARLOS ALBERTO RODRIGUES LARA</NomeFantasia>
                     <Endereco>
-                        <Endereco>RUA PAPA JOï¿½O XXIII</Endereco>
-                        <Numero>1100</Numero>
-                        <Bairro>SAO VICENTE DE PAULO</Bairro>
-                        <CodigoMunicipio>4303103</CodigoMunicipio>
-                        <Cep>94910170</Cep>
+                        <Endereco>RUA BOM JESUS</Endereco>
+                        <Numero>01960</Numero>
+                        <Bairro>PETRÓPOLIS</Bairro>
+                        <CodigoMunicipio>4321204</CodigoMunicipio>
+                        <Cep>95607172</Cep>
                         <Email />
                         </Endereco>
                     <Contato>
-                        <Telefone>5135472003</Telefone>
+                        <Telefone>05198296858</Telefone>
                         </Contato>
                     </PrestadorServico>
                 <TomadorServico>
                     <IdentificacaoTomador>
                         <CpfCnpj>
-                            <Cnpj>87115838001857</Cnpj>
+                            <Cnpj>79080602001802</Cnpj>
                             </CpfCnpj>
                         </IdentificacaoTomador>
-                    <RazaoSocial>INSTITUICAO ADVENTISTA SUL-RIO-GRANDENSE DE EDUCACAO</RazaoSocial>
-                    <NomeFantasia>INSTITUICAO ADVENTISTA SUL-RIO-GRANDENSE DE EDUCACAO</NomeFantasia>
+                    <RazaoSocial>UNIAO SUL BRASILEIRA DA IGREJA ADVENTISTA DO 7 DIA</RazaoSocial>
+                    <NomeFantasia>UNIAO SUL BRASILEIRA DA IGREJA ADVENTISTA DO 7 DIA</NomeFantasia>
                     <Endereco>
-                        <Endereco>RUA PASSOS FIGUEROA</Endereco>
-                        <Numero>841</Numero>
-                        <Bairro>SARANDI</Bairro>
-                        <CodigoMunicipio>4314902</CodigoMunicipio>
+                        <Endereco>AVENIDA PEDRO ADAMS FILHO </Endereco>
+                        <Numero>3224</Numero>
+                        <Bairro>PATRIA NOVA</Bairro>
+                        <CodigoMunicipio>4313409</CodigoMunicipio>
                         <Uf>RS</Uf>
                         </Endereco>
                     <Contato />
@@ -75,7 +79,7 @@ DADOS BANCï¿½RIOS: Banco Itaï¿½ - AG 0602 CC 20.227-7</OutrasInformacoes>
                     <QtdParcela>1</QtdParcela>
                     <Parcelas>
                         <Parcela>1</Parcela>
-                        <Valor>10423.11</Valor>
+                        <Valor>700.0</Valor>
                         </Parcelas>
                     </CondicaoPagamento>
                 </InfNfse>
