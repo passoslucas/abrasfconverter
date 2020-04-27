@@ -58,20 +58,6 @@ for x in nota:
     valor_nota = x.find('valorNota').text
     optante = x.find('optanteSimplesNacional').text
 
-
-    #estrutura inicial
-    xml_doc = ET.Element('ConsultarNfseResposta')
-    listaNfse = ET.SubElement(xml_doc, 'ListaNfse')
-    compNfse = ET.SubElement(listaNfse, 'CompNfse')
-    nfse = ET.SubElement(compNfse, 'Nfse')
-
-    #cabecalho
-    infNfse = ET.SubElement(nfse, 'InfNfse')
-    ET.SubElement(infNfse, 'Numero').text = num_nota
-    ET.SubElement(infNfse, 'CodigoVerificacao').text = codigo_ver
-    ET.SubElement(infNfse, 'DataEmissao').text = emissao
-    ET.SubElement(infNfse, 'IdentificacaoRps')
-
     #tributacao
     dentro_municipio = '1'
     fora_municipio = '2'
@@ -89,9 +75,28 @@ for x in nota:
     if nat_operacao == '[5.9] Imposto recolhido pelo regime �nico de arrecada��o - Sem reten��o' or '[5.9] Imposto recolhido pelo regime único de arrecadação - Sem retenção':
         nat_operacao = dentro_municipio
         iss_retido = sem_retencao
+        
+    if situacao_nota == 'A':
+        situacao_nota = 'False'
+    else:
+        situacao_nota = 'True'
+
+    #estrutura inicial
+    xml_doc = ET.Element('ConsultarNfseResposta')
+    listaNfse = ET.SubElement(xml_doc, 'ListaNfse')
+    compNfse = ET.SubElement(listaNfse, 'CompNfse')
+    nfse = ET.SubElement(compNfse, 'Nfse')
+
+    #cabecalho
+    infNfse = ET.SubElement(nfse, 'InfNfse')
+    ET.SubElement(infNfse, 'Numero').text = num_nota
+    ET.SubElement(infNfse, 'CodigoVerificacao').text = codigo_ver
+    ET.SubElement(infNfse, 'DataEmissao').text = emissao
+    ET.SubElement(infNfse, 'IdentificacaoRps')
+
+
 
     ET.SubElement(infNfse, 'NaturezaOperacao').text = nat_operacao
-
     ET.SubElement(infNfse, 'OptanteSimplesNacional').text = optante
 
     #descricao do servico
@@ -182,10 +187,7 @@ for x in nota:
 
     inf_cancelamento = ET.SubElement(confirmacao_cancelamento, 'InfConfirmacaoCancelamento')
 
-    if situacao_nota == 'A':
-        situacao_nota = 'False'
-    else:
-        situacao_nota = 'True'
+
 
     ET.SubElement(inf_cancelamento, 'Sucesso').text = situacao_nota
     nfse_subs = ET.SubElement(compNfse, 'NfseSubstituicao')
